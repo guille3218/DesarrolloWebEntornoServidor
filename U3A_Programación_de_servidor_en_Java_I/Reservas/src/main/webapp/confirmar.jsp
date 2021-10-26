@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Confirmar</title>
+<jsp:include page="bootstrap.jsp"></jsp:include>
 </head>
 <body>
+	<jsp:include page="barra.jsp"></jsp:include>
 	<jsp:useBean id="reservaBean" class="org.iesalixar.servidor.model.Reserva" scope="request"></jsp:useBean>
 	<h1>Reserva Confirmada</h1>
 	<p>FECHA DE INICIO: <%= reservaBean.getFechaInicio() %></p>

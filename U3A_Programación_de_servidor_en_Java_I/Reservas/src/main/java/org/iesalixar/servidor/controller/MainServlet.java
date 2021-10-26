@@ -1,6 +1,9 @@
 package org.iesalixar.servidor.controller;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
@@ -56,8 +59,13 @@ public class MainServlet extends HttpServlet {
 			if(user!=null && password !=null && PASSWORD_PATTERN.matcher(password).matches() &&
 					passwdConfirm!=null && password.equals(passwdConfirm) && email!=null) {
 				HttpSession session = request.getSession();
+				
+				Date fecha = new Date(session.getCreationTime());
+				DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+				String fechaStr = dateFormat.format(fecha);
+				
 				session.setAttribute("user", user);
-				session.setAttribute("fecha", session.getCreationTime());
+				session.setAttribute("fecha", fechaStr );
 				session.setAttribute("registrado", true);	
 				
 				response.sendRedirect(request.getContextPath()+"/ReservarServlet");				
