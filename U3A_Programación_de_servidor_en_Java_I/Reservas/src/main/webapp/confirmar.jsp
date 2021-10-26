@@ -9,9 +9,9 @@
 <body>
 	<jsp:useBean id="reservaBean" class="org.iesalixar.servidor.model.Reserva" scope="request"></jsp:useBean>
 	<h1>Reserva Confirmada</h1>
-	<p>FECHA DE INICIO: <%= out.println(reservaBean.getFechaInicio()) %></p>
-	<p>FECHA FINALIZACIÓN: <%= out.println(reservaBean.getFechaFin()) %></p>
-	<p>NÚMERO DE PERSONAS: <%= out.println(reservaBean.getPersonas()) %></p>
+	<p>FECHA DE INICIO: <%= reservaBean.getFechaInicio() %></p>
+	<p>FECHA FINALIZACIÓN: <%= reservaBean.getFechaFin() %></p>
+	<p>NÚMERO DE PERSONAS: <%= Integer.toString(reservaBean.getPersonas()) %></p>
 	<p>SERVICIOS RESERVADOS:</p>
 	<ul>
 		<% String[] servicios = (String[]) reservaBean.getServicios();
@@ -21,7 +21,7 @@
 		
 		<% }else{
 			for(String s : servicios){%>
-				<li><%= out.println(s) %></li>
+				<li><%= s %></li>
 				<%}
 			} %>
 	</ul>

@@ -53,7 +53,7 @@ public class ReservarServlet extends HttpServlet {
 			session.setAttribute("start", request.getParameter("start"));
 			session.setAttribute("end", request.getParameter("end"));
 			session.setAttribute("personas", request.getParameter("personas"));
-			session.setAttribute("servicios", request.getParameter("servicios"));
+			session.setAttribute("servicios", request.getParameterValues("servicios"));
 			
 			response.sendRedirect(request.getContextPath()+"/ConfirmarServlet");				
 			return;

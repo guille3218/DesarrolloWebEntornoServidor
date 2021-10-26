@@ -4,7 +4,7 @@ public class Reserva {
 	
 	private String fechaInicio;
 	private String fechaFin;
-	private String Personas;
+	private int Personas;
 	private String[] servicios;
 	
 	public Reserva() {
@@ -27,11 +27,11 @@ public class Reserva {
 		this.fechaFin = fechaFin;
 	}
 
-	public String getPersonas() {
+	public int getPersonas() {
 		return Personas;
 	}
 
-	public void setPersonas(String personas) {
+	public void setPersonas(int personas) {
 		Personas = personas;
 	}
 

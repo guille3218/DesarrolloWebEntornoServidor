@@ -36,7 +36,7 @@ public class ConfirmarServlet extends HttpServlet {
 			
 			reserva.setFechaInicio((String)session.getAttribute("start"));
 			reserva.setFechaFin((String)session.getAttribute("end"));
-			reserva.setPersonas((String)session.getAttribute("personas"));//Da error en esta linea, 
+			reserva.setPersonas(Integer.parseInt((String)session.getAttribute("personas")));//Da error en esta linea, 
 																		  //lo intenté primero mediante int, o Integer, 
 																		  //y daba error, probé con String y sigue dando 
 																		  //el mismo error.

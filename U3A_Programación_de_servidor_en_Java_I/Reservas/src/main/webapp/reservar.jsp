@@ -18,7 +18,7 @@
 		<label class="form-label" for="end">Fecha de Fin</label>
 		<input class="form-control" type="date" name="end" required>
 		<label class="form-label" for="personas">Número de Personas</label>
-		<input class="form-comtrol" type="text" name="personas"><br>
+		<input class="form-comtrol" type="number" name="personas"><br>
 		<label class="form-label" for="servicios"><h3>Servicios</h3></label><br>
 		<input type="checkbox" value="Wifi" name="servicios">Wifi
 		<input type="checkbox" value="Limpieza" name="servicios">Limpieza <br>
